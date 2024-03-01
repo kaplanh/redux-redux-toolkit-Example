@@ -9,6 +9,8 @@ import { clearNews, getNews } from "../features/newsSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import loadingGif from "../assets/loading.gif";
+import foto from "../assets/CMS.jpg";
+
 
 const News = () => {
     const dispatch = useDispatch();
@@ -54,7 +56,7 @@ const News = () => {
                         <CardMedia
                             component="img"
                             height="250"
-                            image={item?.urlToImage}
+                            image={item?.urlToImage || foto}
                             alt="img"
                         />
                         <CardContent>
